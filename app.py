@@ -12,8 +12,8 @@ def index():
 @app.route('/play')
 def play():
     os.system("mpg321 /home/pi/pipranksound/sounds/horn.mp3&")
-    return 'You played a prank sound!<br><a href="/">Back to Menu</a>'  
-
+    #return 'You played a prank sound!<br><a href="/">Back to Menu</a>'
+    return render_template('play.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
